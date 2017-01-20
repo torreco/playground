@@ -96,7 +96,7 @@ The model is pretty simple: an editor (which doesn't do anything) and a set of c
 
 ## A subjective note on static vs dynamic typing 
 
-You may have noticed that most of the functional programming languages such as Haskell and Elm, or hybrid languages such as Scala, Clojure and F# tend to be statically typed. It's no coincidence. They tend to choose this option as programs are easier to reason and with the help of the compiler, the number of errors that get into production is smaller. [Not by much](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.658.7207&rep=rep1&type=pdf) and still [refutable or flawed](http://danluu.com/empirical-pl/).
+You may have noticed that most of the functional programming languages such as Haskell and Elm, or hybrid languages such as Scala, Clojure and F# tend to be statically typed. It's no coincidence. They tend to choose this option as programs are easier to reason and with the help of the compiler, the number of errors that get into production is smaller. Not by much [3] and still refutable [4].
 
 The usual argument used by people preferring dynamic typing is that writing types is too verbose and that by using dynamic typing the developer productivity is increased. 
 
@@ -113,3 +113,10 @@ _PS: The above is @davidmr's personal opinion :)_.
 ## Real world examples
 
 **TODO**: Have you ever used any kind of functional programming in your day to day work?. Do you have any examples?.
+
+## References
+
+* [1] https://youtu.be/wjF1WqGhoQI used as basis of the Primes and Evaluator examples
+* [2] https://vimeo.com/111041651 used as basis of the Editor example
+* [3] http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.658.7207&rep=rep1&type=pdf
+* [4] http://danluu.com/empirical-pl/
