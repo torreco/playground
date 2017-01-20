@@ -27,7 +27,7 @@ object Evaluator {
 
     val totals =
       reader.toStreamWithHeaders
-        .map { applicant: Applicant =>
+        .map { applicant =>
           List(evaluator1(applicant), evaluator2(applicant), evaluator3(applicant), evaluator4(applicant))
         }
         .foldLeft(List(0, 0, 0, 0)) { (accumulator, evaluatorResult) =>

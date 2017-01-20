@@ -84,7 +84,7 @@ if __name__ == "__main__":
     evaluator3 = CriminalRecordsEvaluator(ExperienceEvaluator(QualifiedEvaluator()))
     evaluator4 = CriminalRecordsEvaluator(CreditEvaluator(ExperienceEvaluator(QualifiedEvaluator())))
 
-    with open('resources/applicants.csv') as applicants_data:
+    with open('evaluator/applicants.csv') as applicants_data:
         result = dict()
 
         total1 = 0
