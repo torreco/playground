@@ -13,18 +13,24 @@ import twitter4j.conf.ConfigurationBuilder;
 @Service
 public class TwitterApiService {
 
-    private TwitterStream buildTwitterStream(){
+    private TwitterStreamFactory twitterStreamFactory = null;
+
+    public TwitterApiService(){
+        this.twitterStreamFactory = this.buildTwitterStreamFactory();
+    }
+
+    private TwitterStreamFactory buildTwitterStreamFactory(){
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setOAuthConsumerKey(consumerKey)
                 .setOAuthConsumerSecret(consumerSecret)
                 .setOAuthAccessToken(accessToken)
                 .setOAuthAccessTokenSecret(accessTokenSecret);
-        return  new TwitterStreamFactory(cb.build()).getInstance();
+        return  new TwitterStreamFactory(cb.build());
     }
 
     public Flowable<String> getTwits(String topic){
         return Flowable.create((FlowableEmitter<Status> emitter) -> {
-            TwitterStream twitterStream = buildTwitterStream();
+            TwitterStream twitterStream = this.twitterStreamFactory.getInstance();
             twitterStream.onStatus((Status e) -> {
                         emitter.onNext(e);
                     })

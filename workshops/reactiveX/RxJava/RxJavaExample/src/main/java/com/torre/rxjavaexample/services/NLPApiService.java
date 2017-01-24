@@ -30,10 +30,12 @@ public class NLPApiService {
                 HttpResponse::getBody
         ).map(
                 JsonNode::getObject
-        ).map((JSONObject o) ->
-                o.getJSONArray("sentences").getJSONObject(0)
-        ).map((JSONObject o) ->
-                new JSONObject()
+        ).filter(
+                (JSONObject o) -> !o.has("error")
+        ).map(
+                (JSONObject o) -> o.getJSONArray("sentences").getJSONObject(0)
+        ).map(
+                (JSONObject o) -> new JSONObject()
                         .put("text", o.getJSONObject("text").getString("content"))
                         .put("score", o.getJSONObject("sentiment").getDouble("score"))
         );
