@@ -13,6 +13,8 @@ import static io.reactivex.Flowable.*;
 
 @Service
 public class NLPApiService {
+    
+    //TODO: include google NLP API key
 
     public Flowable<JSONObject> sentimentAnalysis(String text){
         JSONObject document = new JSONObject()
