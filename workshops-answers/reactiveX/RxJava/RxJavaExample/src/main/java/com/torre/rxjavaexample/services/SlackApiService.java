@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SlackApiService {
+    
+    //TODO: include Slack token
 
     public void publishMessage(String channel, String text, String iconEmoji) throws UnirestException {
         Unirest.post("https://slack.com/api/chat.postMessage")

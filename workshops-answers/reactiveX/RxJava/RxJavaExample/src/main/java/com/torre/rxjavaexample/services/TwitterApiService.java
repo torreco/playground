@@ -12,6 +12,8 @@ import twitter4j.conf.ConfigurationBuilder;
 
 @Service
 public class TwitterApiService {
+    
+    //TODO: Include consumerKey consumerSecret accessToken and accessTokenSecret
 
     private TwitterStreamFactory twitterStreamFactory = null;
 
