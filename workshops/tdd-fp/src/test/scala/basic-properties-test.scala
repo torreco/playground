@@ -2,7 +2,7 @@ import org.scalacheck._
 import org.scalacheck.Prop._
 import java.lang.Math
 
-object PropertiesTest extends Properties("Properties") {
+object basicPropertiesTest extends Properties("Basic Properties") {
 
   property("List reverse") = forAll { l: List[String] =>
     l.reverse.reverse == l
