@@ -1,0 +1,21 @@
+forAllTest
+test-only forAllTest
+test-only basicTest
+test-only propertiesTest
+basicPropertiesTest
+test-only basicPropertiesTest
+test-only basicGeneratorsTest
+test-only basicStatefulTest
+symmetryTest
+test-only symmetryTest
+test-only basicStatefulTest
+test-only symmetryTest
+basicStatefulTest.property.check()
+basicStatefulTest.property().check
+test-only basicStatefulTest.property()
+test-only basicStatefulTest
+CounterSpecification.CounterSpecification.property().check
+CounterSpecification.property().check
+test-only CounterSpecification.property().check
+test-only basicStatefulTest
+exit
