@@ -68,9 +68,8 @@ test-only basicSymmetryTest
 
 ## References
 
-[1] https://github.com/rickynils/scalacheck/blob/master/doc/UserGuide.md ScalaCheck User Guide
-[2] https://yow.eventer.com/yow-lambda-jam-2015-1305/practical-property-based-testing-by-charles-o-farrell-1884 Charles O’Farrell at YOW! Lambda Jam 2015
-[3] https://github.com/oscarrenalias/scalacheck-examples Examples used as basis for the workshop
-[4] https://github.com/charleso/property-testing-preso Examples used as basis for the workshop
-
+* [1] https://github.com/rickynils/scalacheck/blob/master/doc/UserGuide.md ScalaCheck User Guide
+* [2] https://yow.eventer.com/yow-lambda-jam-2015-1305/practical-property-based-testing-by-charles-o-farrell-1884 Charles O’Farrell at YOW! Lambda Jam 2015
+* [3] https://github.com/oscarrenalias/scalacheck-examples Examples used as basis for the workshop
+* [4] https://github.com/charleso/property-testing-preso Examples used as basis for the workshop
 
