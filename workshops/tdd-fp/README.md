@@ -50,7 +50,7 @@ test-only basicGeneratorsTest
 
 #### Stateful Testing
 
-Sometimes you want to not only specify how a method should behave on its own, but also how a collection of methods should behave together when used as an interface to a larger system. You want to specify how the methods - or commands - affect the system's state throughout time.
+Sometimes you want to not only specify how a method should behave on its own, but also how a collection of methods should behave together when used as an interface to a larger system. You want to specify how the methods affect the system's state throughout time.
 
 In this third example, you can test if a state is correct after running an arbitrary sequence of events.
 
@@ -60,7 +60,7 @@ test-only basicStatefulTest
 
 #### Symmetry Testing
 
-The fourth and last example is a small recap of all the previous concept seen before, using the symmetry pattern.
+The fourth and last example is a small recap of all the previous concepts seen before, using the symmetry pattern.
 
 ```shell
 test-only basicSymmetryTest
@@ -70,6 +70,6 @@ test-only basicSymmetryTest
 
 * [1] https://github.com/rickynils/scalacheck/blob/master/doc/UserGuide.md ScalaCheck User Guide
 * [2] https://yow.eventer.com/yow-lambda-jam-2015-1305/practical-property-based-testing-by-charles-o-farrell-1884 Charles O’Farrell at YOW! Lambda Jam 2015
-* [3] https://github.com/oscarrenalias/scalacheck-examples Examples used as basis for the workshop
-* [4] https://github.com/charleso/property-testing-preso Examples used as basis for the workshop
+* [3] https://github.com/oscarrenalias/scalacheck-examples Examples used as a basis for the workshop
+* [4] https://github.com/charleso/property-testing-preso Examples used as a basis for the workshop
 
