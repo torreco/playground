@@ -1,3 +1,4 @@
+import org.scalacheck._
 import org.scalacheck.Prop._
 import org.scalacheck.{Arbitrary, Properties, Gen}
 

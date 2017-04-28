@@ -1,3 +1,4 @@
+import org.scalacheck._
 import org.scalacheck.commands.Commands
 import org.scalacheck.{Properties, Gen, Prop}
 import scala.util.{Try, Success}

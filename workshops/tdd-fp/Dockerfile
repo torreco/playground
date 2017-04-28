@@ -16,7 +16,5 @@ RUN curl -L -o sbt-$SBT_VERSION.deb https://dl.bintray.com/sbt/debian/sbt-$SBT_V
 
 WORKDIR /app
 
-ADD . /app
-
 CMD ["sbt"]
 

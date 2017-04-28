@@ -6,7 +6,7 @@ See through a series of simple examples, how property-base testing can be implem
 
 ## Environment Setup
 
-The workshop environment is provided as a Docker image. Please execute the following command at the root folder of this workshop.
+The workshop environment is provided as a Docker image. Please execute the following command in the root folder of this workshop.
 
 ```shell
 docker build -t tdd-fp-ws .
@@ -15,7 +15,7 @@ docker build -t tdd-fp-ws .
 And now let's run the app and start sbt.
 
 ```shell
-docker run -it tdd-fp-ws
+docker run -it --rm  -v $(pwd):/app tdd-fp-ws
 ```
 
 ## Step by Step
@@ -26,13 +26,13 @@ docker run -it tdd-fp-ws
 
 #### Test Case Minimisation
 
-One interesting feature, is that if it finds an argument that falsifies a property, it tries to minimise that argument before it is reported.
+One interesting feature is that if it finds an argument that falsifies a property, it tries to minimize that argument before it is reported.
 
 #### Properties
 
-A property is the testable unit.
+A property is a testable unit.
 
-The first example is about testing Lists behaviour. Before running the test, first take a look of the code and get familiarized with it. There you are going to see examples of how to condition, combine, group and label properties.
+The first example is about testing Lists behavior. Before running the test, first, take a look at the code and get familiarized with it. There you are going to see examples of how to condition, combine, group and label properties.
 
 ```shell
 test-only basicPropertiesTest
@@ -40,7 +40,7 @@ test-only basicPropertiesTest
 
 #### Generators
 
-Generators are responsible for generating test data. A generator can be seen simply as a function that takes some generation parameters, and (maybe) returns a generated value.
+Generators are responsible for generating test data. A generator can be seen simply as a function that takes some generation parameters, and returns a generated value.
 
 In this second example, we are going to see how to generate arbitrary values of a Rectangle case class, define the size of its height and width with a simple condition and classify the data it generates.
 
@@ -50,9 +50,9 @@ test-only basicGeneratorsTest
 
 #### Stateful Testing
 
-Sometimes you want to not only specify how a method should behave on its own, but also how a collection of methods should behave together, when used as an interface to a larger system. You want to specify how the methods - or commands - affect the system's state throughout time.
+Sometimes you want to not only specify how a method should behave on its own, but also how a collection of methods should behave together when used as an interface to a larger system. You want to specify how the methods - or commands - affect the system's state throughout time.
 
-In this third example, you can test if an state is correct after running an arbitrary sequence of events.
+In this third example, you can test if a state is correct after running an arbitrary sequence of events.
 
 ```shell
 test-only basicStatefulTest
@@ -60,7 +60,7 @@ test-only basicStatefulTest
 
 #### Symmetry Testing
 
-The fourth and last example, is a small recap of all the previous concept seen before, using the symmetry pattern.
+The fourth and last example is a small recap of all the previous concept seen before, using the symmetry pattern.
 
 ```shell
 test-only basicSymmetryTest
